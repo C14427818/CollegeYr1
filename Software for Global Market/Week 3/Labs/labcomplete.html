@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <link rel='stylesheet' type='text/css' href="sfgm.css">
+		<script>
+		function listAdd(){
+		//creating variables
+		var storage, storage1, storage2, storage3;
+		storage = document.getElementById("text");
+		storage1 = document.getElementById("list1");
+		storage2 = storage.value;
+		storage3 = document.createElement("li");
+		storage3.innerHTML = storage2
+		storage1.appendChild(storage3);
+		//Document is not just text it is a collection of data structures
+		}
+</script>
+</head>
+<body>
+	<form>
+	<input type="text" id="text"></input>
+	<input type="button" onclick="listAdd()" value="Click me"></input>
+	
+	<ul id="list1">
+
+	</ul>
+	
+	
+	    
+	  
+</body>
+</html> 

@@ -1,0 +1,9 @@
+To install
+1. Download and install Java - http://www.java.com/
+2. Run the batch file run.bat
+3. You can put web documents in the directory named htdocs
+4. You can access them by going to the URL http://localhost:8008/filename
+
+This is a version of the nexus java web server available at http://www.hpl.hp.co.uk/people/ak/java/nexus
+
+

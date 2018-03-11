@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<team name="Scotland">
+
+	<home_ground>Murrayfield</home_ground>
+	<captain>Greig Laidlaw</captain>
+	<coach>Vern Cotter</coach>
+	<colours main="#000099" second="white"/>
+
+</team>

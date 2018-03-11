@@ -1,0 +1,80 @@
+
+
+<head>
+<link rel='stylesheet' type='text/css' href="sfgm.css">
+		<script>
+		function listAdd(){
+		//creating variables
+		var storage, storage1, storage2, storage3;
+		storage = document.getElementById("text");
+		storage1 = document.getElementById("list1");
+		storage2 = storage.value;
+		storage3 = document.createElement("li");
+		storage3.innerHTML = storage2
+		storage1.appendChild(storage3);
+		//Document is not just text it is a collection of data structures
+		}
+</script>
+</head>
+
+<body>
+	<div id="body">
+		<div id="nav">
+		<ul>
+			<li style="color:blue;"><a href="home.html" class="class2"><em>Home</em></a></li>
+		
+			<li style="color:blue;"><a href="contact.html" class="class2"><em>Contact Us</em></a></li>
+		</ul>
+	</div>
+	
+	<div class="wrapper">
+		<div id="section">
+		<img src="tracker.jpg" style="border-radius:25px;"/>
+		<p style="color:blue;"><em>Bus Tracker is a simple new way to track the bus that you wish to take it shows you where the bus is so you can track it quick and easy!
+	</em></p>
+		<form>
+	<text style="color:blue;">Enter Bus Number</text>	
+	<input type="text" id="text"></input>
+	<input type="button" onclick="listAdd() " value="Display Choice"></input>
+	
+	<text style="color:blue;">Enter Stop Number</text>
+	<input type="text" id="text"></input>
+	<form>
+	<input Type="button" Value="To Tracker" Onclick="window.location.href='timetable.html'"> 
+	</form>
+	
+
+	
+	<ul id="list1">
+
+	</ul>
+		</form>
+		<script >
+
+	var i = 0;
+	var pic = new Array();
+ 
+
+	pic[0] = "bus1.jpg";
+	pic[1] = "bus4.jpg";
+	pic[2] = "bus2.jpg";
+	pic[3]= "bus5.jpg";
+	pic[4]= "bus3.jpg";
+
+
+	function slideshow()
+	{
+		document.db.src = pic[i];
+		if(i < pic.length - 1) i++; else i = 0;
+		setTimeout("slideshow()",4000);
+	}
+		window.onload=slideshow;
+</script>
+
+
+	<img height="250" class="slideshow1" name="db" src="bus1" style="position: absolute;top:255px; right:auto; left:250px;"  />
+		</div>
+	</div>
+</body>
+</html>
+	

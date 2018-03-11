@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<head>
+<link rel='stylesheet' type='text/css' href="ca.css">
+</head>
+
+<body>
+	<div id="body">
+		<div id="nav">
+		<ul>
+			<li style="color:brown;"><a href="homepage.html"><em>Home</em></a></li>
+			<li style="color:brown;"><a href="location.html"><em>Location</em></a></li>
+			<li style="color:brown;"><a href="menu.html"><em>Menu</em></a></li>
+			<li style="color:brown;"><a href="contact.html"><em>Contact Us</em></a></li>
+		</ul>
+	</div>
+	
+	<div class="wrapper">
+		<div id="section">
+		<h1 style="color:brown;"><em>Welcome to the Coffee Cafe</em></h1>
+		<img src="welcome.jpg" style="border-radius:25px;"/>
+		<p style="color:brown;"><em>Here at the Coffee Cafe we really take pride in making our coffee and making sure that all our customers are satisfied. We make all our cups of coffee so that they are perfection
+	so you as our customer get nothing but the best. Our Coffee is freshly ground for you, so you don't have to grind the beans yourself. Beans designated for espresso are roasted longer
+	than regular coffee beans, so that the oils are brought to the surface of the bean. So come on down and give our coffee a 
+	try!</em></p>
+		<script >
+
+	var i = 0;
+	var pic = new Array();
+ 
+
+	pic[0] = "coffee.jpg";
+	pic[1] = "coffeecup.jpg";
+	pic[2] = "coffeebeans.jpg";
+	pic[3]= "expresso2.jpg";
+	pic[4]= "americano2.jpg";
+	pic[5]= "latte2.jpg";
+	pic[6]= "coffeemenu.jpg";
+	pic[7]= "mocha2.jpg";
+	pic[8]= "americano2.jpg";
+	pic[9]= "expresso2.jpg";
+	pic[10]= "coffeebeans.jpg";
+	pic[11]= "latte2.jpg";
+	pic[12]= "coffeemenu.jpg";
+
+
+	function slideshow()
+	{
+		document.cafe.src = pic[i];
+		if(i < pic.length - 1) i++; else i = 0;
+		setTimeout("slideshow()",4000);
+	}
+		window.onload=slideshow;
+</script>
+
+
+	<img height="250" class="slideshow1" name="cafe" src="coffee"  />
+		</div>
+	</div>
+</body>
+</html>
+	

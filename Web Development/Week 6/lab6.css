@@ -1,0 +1,24 @@
+body{
+        font-size:100%;
+        font-family: Arial, sans-serif;
+        }
+#wrapper{
+                width:600px;
+                }
+h2{
+        backround-color: #dedede;
+        border-bottom: 1px solid #d4d4d4;
+        border-top: 1px solid #d4d4d4;
+        border-radius: 5px;
+        box-shadow:3px 3px 3px #ccc;
+        color:#ccc;
+        font-size: 1.1em;
+        margin:12px;
+        padding: 0.3em 1em;9
+        text-shadow:#9FBEB9 1px 1px 1px;
+        text-transform: uppercsae;
+        }
+h2.account              { background-color: #0099CC;}
+h2.address              { background-color: #00CCFF;}
+h2.public-profile               { background-color: #33CCFF;}
+h2.emails               { background-color: #66CCFF;}

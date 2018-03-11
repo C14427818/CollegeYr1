@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+<link rel='stylesheet' type='text/css' href="ca.css">
+</head>
+
+<body>
+	<div id="body">
+		<div id="nav">
+		<ul>
+			<li style="color:brown;"><a href="homepage.html"><em>Home</em></a></li>
+			<li style="color:brown;"><a href="location.html"><em>Location</em></a></li>
+			<li style="color:brown;"><a href="menu.html"><em>Menu</em></a></li>
+			<li style="color:brown;"><a href="contact.html"><em>Contact Us</em></a></li>
+		</ul>
+	</div>
+	
+	<div class="wrapper">
+		<div id="section">
+		<script >
+
+	var i = 0;
+	var path = new Array();
+ 
+
+	path[0] = "margarita.png";
+	path[1] = "peperoni.png";
+	path[2] = "ham.png";
+	path[3]= "chicken.png";
+	path[4]= "meat.png";
+	path[5]= "chips.png";
+	path[6]= "carbonara.png";
+	path[7]= "garlic.png";
+	path[8]= "bruschetta.png";
+	path[9]= "spagball.png";
+	path[10]= "caesar.png";
+	path[11]= "brownie.png";
+	path[12]= "tira.png";
+
+
+	function swapImage()
+	{
+		document.slide.src = path[i];
+		if(i < path.length - 1) i++; else i = 0;
+		setTimeout("swapImage()",3000);
+	}
+		window.onload=swapImage;
+</script>
+
+
+	<img height="400" class="slide1" name="slide" src="margarita"  />
+	</div>
+</div>
+</body>
+</html>

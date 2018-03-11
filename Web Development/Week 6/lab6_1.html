@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<h1 font-size:60px"><text style="color: #336699;">Create a New Account</text></h1>
+        <form method="post" action="showform.php">
+        <link rel="stylesheet"href="lab6.css">
+        <fieldset>
+                <h2 class="account"><text style="color: #FFFFFF;">Account</text></h2>
+                <ul>
+
+                                <label for="first_name"><text style="color: #336699;">First Name:</text></label>
+                                <input type="text" od="first_name" name="first_name" class="large" /><br>
+
+
+                                <label for="last_name"><text style="color: #336699;">Last Name:</text></label>
+                                <input type="text" od="last_name" name="last_name" class="large" /><br/>
+
+
+                                <label for="email"><text style="color: #336699;">Email:</text></label>
+                                <input type="email" od="email" name="email" class="large" /><br/>
+
+
+                                <label for="password"><text style="color: #336699;">Password:</text></label>
+                                <input type="password" od="password" name="password" class="large" /><br/>
+
+
+                                <label for="re-enter password"><text style="color: #FF0000;">Re-enter Password:</text></label>
+                                <input type="re-renter password" od="re-enter password" name="re-enter password" class="large" /><br />
+
+                        </ul>
+                </fieldset>
+
+<link rel="stylesheet"href="lab6.css">
+        <fieldset>
+                <h2 class="account"><text style="color: #FFFFFF;">Address</text></h2>
+                <ul>
+
+                                <label for="street_address"><text style="color: #336699;">Street Address:</text></label>
+                                <input type="text" od="street_address" name="street_address" class="large" /><br/>
+
+
+                                <label for="city"><text style="color: #336699;">City:</text></label>
+                                <input type="text" od="city" name="city" class="large" /><br/>
+
+
+                                <label for="county"><text style="color: #336699;">County:</text></label>
+                                <select type="county" od="county" name="county">
+                                <option value="C">Cork</option>
+                                <option value="D" selected>Dublin</option>
+                                <option value="WW">Wicklow</option>
+                                <option value="T">Tipperary</option>
+                                </select><br/>
+
+                                <label for="postcode"><text style="color: #336699;">Postcode</text></label>
+                                <input type="text" od="postcode" name="postcode" class="large" /></label>
+
+                    </ul>
+                </fieldset>
+
+                <link rel="stylesheet"href="lab6.css">
+
+<fieldset>
+                <h2 class="account"><text style="color: #FFFFFF;">Public Profile</text></h2>
+
+                        <ul>
+
+                        <label for="ScreenName"><text style="color: #336699;">Screen Name:</text></label>
+                        <input type="text" id="screenname" name="ScreenName" /><br/>
+
+                        <label for="Web"><text style="color: #336699;">Web:</text></label>
+                        <input type="text" id="web" name="web" /><br/>
+
+                        <label for="bio"><text style="color: #336699;">Bio:</text></label>
+                        <textarea id="bio" name="bio" row="8" cols="50"></textarea><br/>
+						</ul>
+				<div>
+				 <form>
+					<fieldset>
+						<legend><text style="color: #336699;">Select the Date </text></legend>
+						<ul>
+							<li>
+								<label for="college"><text style="color: #336699;">What date did you start College?</text></label>
+								<input type="date" id="college" name="college" required="required"/><br/>
+							</li>
+						</ul>
+					</fieldset>
+				 </form>	
+				</div>
+
+                        <label><text style="color: #336699;">Gender:</text></label><br/>
+                        <fieldset class="radio">
+                        <ul>
+                                <input type="radio" id="gender_male" name="gender" value="m"/>
+                                <label for="gender_male"><text style="color: #336699;">Male</text></label><br/>
+
+                                <input type="radio" id="gender_female" name="gender" value="f"/>
+                                <label for="gender_female"><text style="color: #336699;">Female</text></label>
+                        </ul>
+                        </fieldset>
+        </fieldset>
+
+
+
+                <fieldset>
+                <h2 class="account"><text style="color: #FFFFFF;">Email<text></h2>
+
+                        <ul>
+
+                        <input type="checkbox" name="email" value="Message"  /><text style="color: #336699;">It is okay to email me with messages from other users</text><br />
+                        <input type="checkbox" name="email" value="Promotion" /><text style="color: #336699;">It is okay to email me with occasional promotions about our other products</text><br />
+                        </ul>
+                </fieldset>
+
+
+                <fieldset>
+                <ul>
+                        <label for "referral"><text style="color: #336699;"> Where did you find out about us?</text></label>
+                        <select if="referral" nae="referral">
+                        <optgroup label="On-line">
+                        <option value="social_network">Social Network</option>
+                        <option value="search_engine">Search Engine</option>
+                        <option value="word_of_mouth">A Friend</option>
+                        </optgroup><p></p>
+                        <input type="submit"  name="submitButton" value="Create Account"
+                </ul>
+                </fieldset>
+
+        </form>
+        </body>
+</html>

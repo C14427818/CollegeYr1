@@ -1,0 +1,25 @@
+body{background-color: brown}
+#box1 {
+	width:400px;
+	height:305px;
+	margin: 50px auto;
+	position:relative;
+	background-color:white;
+}
+
+.box2 {
+	height: 140px;
+	width: 235px;
+	margin-right: 10px;
+	position: absolute;
+	background-color: black;
+	box-shadow: 5px 3px 4px black;
+    -webkit-transform: skew(3deg, 3deg);
+    -moz-transform: skew(3deg, 3deg);
+    -o-transform: skew(3deg, 3deg);
+    -ms-transform: skew(3deg, 3deg);
+    transform: skew(3deg, 3deg);
+    bottom:0; 
+	right:0; 
+	z-index: -1;
+}

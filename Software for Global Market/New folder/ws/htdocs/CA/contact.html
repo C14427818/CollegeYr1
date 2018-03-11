@@ -1,0 +1,48 @@
+
+<head>
+<link rel='stylesheet' type='text/css' href="sfgm.css">
+
+		<script type="text/javascript" src="keeptext.js"></script>
+		
+</script>
+</head>
+
+<body onload= " generateName(); generateAge(); ">
+
+	<div id="body">
+		<div id="nav">
+		<ul>
+			<li style="color:blue;"><a href="home.html" class="class2"><em>Home</em></a></li>
+			
+			<li style="color:blue;"><a href="contact.html" class="class2"><em>Contact Us</em></a></li>
+		</ul>
+	</div>
+	
+	<div class="wrapper">
+		<div id="section">
+			<h1 style="color: blue; font-size:40px">Contact us</h1><br>
+			</br>
+		<form name="formname" method="post">
+			<label style="color: blue;">Full Name:</label> <input type="text" value="" name="userName" size="20" id="name" onkeydown="storeName();"/>
+			<label style="color: blue;">Age:</label> <input type="text" size="2" id="Age" onkeydown="storeAge();"/><br />
+
+			<div style="color: blue;">Do you want us to contact you by phone?</div>
+			<input type="radio" name="Type" value="Hardback" /><text style="color: blue;">Yes</text>
+			<input type="radio" name="Type" value="Paperback" /><text style="color: blue;">No</text>
+
+			<div style="color: blue;">If Yes, Please give us your contact number:</br>
+			and a comment.</div>
+			<textarea name="myTextArea" rows="7" cols="50" wrap="soft">
+			your number must be 7 digits :) 
+			</textarea><p></p>
+			<text style="color:blue;">If No, You can contact us on 01234532</text>
+			<div style="color: blue;">Thank you for your time</div>
+			<input type="button" value="Send It" onclick="createCookie('test',test.innerHTML,1)">
+			<input type="reset" value="Clear It" />
+		</form>
+<p></p>
+		</div>
+	</div>
+	
+</body>
+</html>

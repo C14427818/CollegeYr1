@@ -1,0 +1,110 @@
+
+<head>
+<link rel='stylesheet' type='text/css' href="sfgm.css">
+
+<script language="JavaScript">
+			// This is a DOM node which represents the XML document
+			var xmlDoc;
+
+			// This function downloads an XML document from the server,
+			// parses it, and presents the parsed document as a DOM tree
+			function load(url) { 
+				var xmlHTTP;
+				if (window.XMLHttpRequest) {
+					xmlHTTP = new XMLHttpRequest();
+				}
+				else {
+					xmlHTTP = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				xmlHTTP.open("GET", url, false);
+				xmlHTTP.send(null);
+				parser = new DOMParser();
+				xmlDoc = parser.parseFromString(xmlHTTP.responseText, "application/xml");
+			}
+
+			// This function evaluates an XPath expression against the DOM tree of the
+			// XML document and returns a text result. It is useful for getting attributes
+			// and text values.
+			function getSimpleText(path) {
+				// For Internet Explorer, use the following...
+				if (window.ActiveXObject) { 
+					var node = xmlDoc.selectSingleNode(path);
+					return node.childNodes[0].nodeValue;
+				}
+				// For all other browsers, use the following...
+				else {
+					var snapshot = xmlDoc.evaluate(path, xmlDoc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+					return snapshot.snapshotItem(0).textContent;
+				}
+			}
+
+			// Every time the user changes their team choice, this function is called.
+			// It will get the ID of the currently selected team, contact the server
+			// to retreive the appropriate XML document for that team, and use the DOM 
+			// methods on the HTML document to update the table in the body of the web page.
+			function update_team() {
+				// Find out which team has been selected
+				var teamID = document.getElementById("selected_team").value;
+
+				// Download the XML document e.g. ireland.xml...
+				load(teamID + '.xml');
+
+				// ...find the name of the team from the XML document, and update the
+				// table cell in the body which is called team_name...
+				document.getElementById('team_name').innerHTML = getSimpleText("/team/@name");
+				// and likewise for all the others.
+				document.getElementById('home_ground').innerHTML = getSimpleText("/team/home_ground");
+				document.getElementById('captain').innerHTML = getSimpleText("/team/captain");
+				document.getElementById('coach').innerHTML = getSimpleText("/team/coach");
+				document.bgColor = getSimpleText("/team/colours/@main");
+				document.fgColor = getSimpleText("/team/colours/@second");
+			}
+		</script>
+</head>
+
+<body>
+	<div id="body">
+		<div id="nav">
+			<ul>
+				<li style="color:blue;"><a href="home.html" class="class2"><em>Home</em></a></li>
+				<li style="color:blue;"><a href="timetable.html" class="class2"><em>Timetable</em></a></li>
+				<li style="color:blue;"><a href="contact.html" class="class2"><em>Contact Us</em></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="wrapper">
+		<div id="section">
+		
+			<h1 style="color:blue; text-align:center;"><em>Bus Location</em></h1>
+			<img src="map.jpg" style="position: absolute;top:175px; right:370px;"/>
+			<img src="realtime.jpg" style="position: absolute;top:175px; left:370px;"/>
+			
+					<table class="table" width="100%">
+			
+			<thead>
+				<tr><th><text style="color:blue;">Country you are in</th></tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td align="center" id="team_name" width="25%">&nbsp;</td>
+
+				</tr>
+			</tbody>
+		</table>
+			
+					<form name="team_selection_form" id="team_selection_form">
+			
+			<select style="position: absolute; right:325px; bottom:80px;" id="selected_team" onchange="update_team()">
+				<option value="">Select your bus and street</option>
+				<option value="ireland">15B Dawson St</option>
+				<option value="england">205 Oxford St</option>
+				<option value="scotland">67 Killermont St</option>
+				<option value="wales">12 Kellet St</option>
+			</select>
+		</form>
+			
+		</div>
+	</div>
+</body>
+</html>

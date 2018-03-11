@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<team name="Ireland">
+
+	<home_ground>Aviva Stadium</home_ground>
+	<captain>Paul O'Connell</captain>
+	<coach>Joe Schmidt</coach>
+	<colours main="green" second="white"/>
+
+</team>
